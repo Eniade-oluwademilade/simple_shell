@@ -7,16 +7,16 @@
  */
 char *_strcpy(char *str, char *cpy)
 {
-        int i;
+	int i;
 
-        for (i = 0; str[i] != '\0'; i++)
-        {
-                str[i] = cpy[i];
-                str++;
-                cpy++;
-        }
-        *cpy = '\0';
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		str[i] = cpy[i];
+		str++;
+		cpy++;
+	}
+	*cpy = '\0';
 
-        return (cpy);
+	return (cpy);
 }
 ~

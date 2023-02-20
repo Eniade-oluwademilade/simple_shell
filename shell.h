@@ -44,9 +44,9 @@ extern char **environ;
  */
 typedef struct liststr
 {
-        int num;
-        char *str;
-        struct liststr *next;
+	int num;
+	char *str;
+	struct liststr *next;
 } list_t;
 
 
@@ -76,30 +76,30 @@ typedef struct liststr
  */
 typedef struct passinfo
 {
-        char *arg;
-        char **argv;
-        char *path;
-        int argc;
-        unsigned int line_count;
-        int err_num;
-        int linecount_flag;
-        char *fname;
-        list_t *env;
-        list_t *history;
-        list_t *alias;
-        char **environ;
-        int env_changed;
-        int status;
+	char *arg;
+	char **argv;
+	char *path;
+	int argc;
+	unsigned int line_count;
+	int err_num;
+	int linecount_flag;
+	char *fname;
+	list_t *env;
+	list_t *history;
+	list_t *alias;
+	char **environ;
+	int env_changed;
+	int status;
 
-        char **cmd_buf; /* pointerti cmd;chainbuffer, of memory management */
-        int cmd_buf_type; /*CMD_type ||' &&, ; */
-        int  readfd;
-        int histcount;
+	char **cmd_buf; /* pointerti cmd;chainbuffer, of memory management */
+	int cmd_buf_type; /*CMD_type ||' &&, ; */
+	int  readfd;
+	int histcount;
 } info_t;
 
 #define INFO_INT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-        0, 0, 0}
+	0, 0, 0}
 
 /**
  * struct builtin - contains a builtin string and related function.
@@ -107,8 +107,8 @@ typedef struct passinfo
  * @func: the function
  */
 {
-        char *type;
-        int (*func)(info_t *);
+	char *type;
+	int (*func)(info_t *);
 } builtin_table;
 
 /* toem_shloop.c */
@@ -134,7 +134,8 @@ int _putsfd(char *str, int fd);
 
 /* toem_string.c */
 char *_strlen(char *);
-int _strcmp(char *, char *);char *starts_with(const char *, const char *);
+int _strcmp(char *, char *);
+char *starts_with(const char *, const char *);
 char *_strcat(char *, char *);
 
 /*toem_string1.c */
